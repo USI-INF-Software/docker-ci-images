@@ -2,9 +2,8 @@
 # Basic image with scala and sbt
 #
 
-# FROM frolvlad/alpine-oraclejdk8:slim
 FROM openjdk:jre-alpine
-MAINTAINER Luca Ponzanelli
+MAINTAINER Luca Ponzanelli<luca.ponzanelli@usi.ch>
 
 ENV SCALA_VERSION=2.12.4 
 ENV SCALA_HOME=/usr/local/scala 
