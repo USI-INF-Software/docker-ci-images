@@ -5,3 +5,5 @@ GitHub MIRROR:
   stage: mirroring
   script:
     - git push --mirror https://GITHUB_USERNAME:GITHUB_TOKEN@github.com:USI-INF-Software/docker-ci-images.git
+tags:
+    - shared
