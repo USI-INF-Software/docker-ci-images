@@ -1,5 +1,24 @@
 stages:
+  - build
+  - push
   - mirroring
+
+build_images:
+  stage: build
+  script:
+    - docker info
+    - ./ci-jobs/build.sh
+  tags:
+    - shell
+
+push_images:
+  stage: push
+  script:
+    - ./ci-jobs/push.sh
+  only:
+    - master
+  tags:
+    - shell
 
 github_mirroring:
   stage: mirroring
@@ -8,4 +27,4 @@ github_mirroring:
   only:
     - master
   tags:
-    - shared
+    - shell

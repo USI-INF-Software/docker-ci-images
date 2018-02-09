@@ -58,7 +58,6 @@ RUN wget --no-verbose -O /tmp/firefox.tar.bz2 https://download-installer.cdn.moz
   && rm /tmp/firefox.tar.bz2 \
   && ln -fs /opt/firefox/firefox /usr/bin/firefox
 
-
 #####################################################################
 # Installs
 #####################################################################
@@ -66,5 +65,5 @@ RUN wget --no-verbose -O /tmp/firefox.tar.bz2 https://download-installer.cdn.moz
 RUN yarn global add bower
 RUN yarn global add polymer-cli
 
-# configure bower to allow run with sudo
+# configure bower to allow to run with sudo
 RUN echo '{ "allow_root": true }' > /root/.bowerrc
