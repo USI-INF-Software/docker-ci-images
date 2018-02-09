@@ -1,11 +1,13 @@
 FROM openjdk:jre-alpine
 
+
 ENV SCALA_VERSION=2.12.4 
 ENV SCALA_HOME=/usr/local/scala 
 ENV SBT_VERSION=1.1.0 
 ENV SBT_HOME=/usr/local/sbt
 ENV PATH ${PATH}:${SBT_HOME}/bin
 ENV PATH ${PATH}:${SCALA_HOME}/bin
+
 
 RUN apk add --no-cache --virtual=.build-dependencies bash wget ca-certificates
 RUN apk add bash
