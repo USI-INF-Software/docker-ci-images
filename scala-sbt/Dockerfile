@@ -1,4 +1,4 @@
-FROM openjdk:jre-alpine
+FROM openjdk:8-jdk-alpine
 
 
 ENV SCALA_VERSION=2.12.4 
