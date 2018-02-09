@@ -1,9 +1,4 @@
-#
-# Basic image with scala and sbt
-#
-
 FROM openjdk:jre-alpine
-MAINTAINER Luca Ponzanelli<luca.ponzanelli@usi.ch>
 
 ENV SCALA_VERSION=2.12.4 
 ENV SCALA_HOME=/usr/local/scala 
@@ -19,4 +14,3 @@ RUN wget -qO - --no-check-certificate "http://scala-lang.org/files/archive/scala
 RUN wget -qO - --no-check-certificate https://github.com/sbt/sbt/releases/download/v${SBT_VERSION}/sbt-${SBT_VERSION}.tgz  | tar xz -C $SBT_HOME --strip-components=1
 RUN apk del .build-dependencies wget
 RUN sbt sbtVersion
-
