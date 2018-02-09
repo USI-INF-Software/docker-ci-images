@@ -8,6 +8,7 @@ FROM openjdk:8-jre-slim
 #####################################################################
 # Install tools
 #####################################################################
+
 RUN apt-get update && apt-get install -y \
   git \
   xvfb \
@@ -20,6 +21,7 @@ RUN apt-get update && apt-get install -y \
 # based on: https://github.com/timbru31/docker-java-node
 # install node with script: https://github.com/nodesource/distributions
 #####################################################################
+
 RUN curl -sL https://deb.nodesource.com/setup_8.x | bash -
 RUN apt-get update && apt-get install -y \
     nodejs \
