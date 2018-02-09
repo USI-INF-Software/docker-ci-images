@@ -18,7 +18,7 @@ push_images:
   only:
     - master
   tags:
-    -shared
+    - shared
 
 github_mirroring:
   stage: mirroring
