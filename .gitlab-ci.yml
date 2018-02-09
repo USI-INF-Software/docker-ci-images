@@ -1,13 +1,3 @@
-image: docker:latest
-
-# When using dind, it's wise to use the overlayfs driver for
-# improved performance.
-variables:
-  DOCKER_DRIVER: overlay2
-
-services:
-- docker:dind
-
 stages:
   - build
   - push
@@ -19,7 +9,7 @@ build_images:
     - docker info
     - ./ci-jobs/build.sh
   tags:
-    - shared
+    - shell
 
 push_images:
   stage: push
@@ -28,7 +18,7 @@ push_images:
   only:
     - master
   tags:
-    - shared
+    - shell
 
 github_mirroring:
   stage: mirroring
@@ -37,4 +27,4 @@ github_mirroring:
   only:
     - master
   tags:
-    - shared
+    - shell
