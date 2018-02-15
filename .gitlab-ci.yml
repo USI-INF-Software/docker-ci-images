@@ -23,7 +23,7 @@ push_images:
 github_mirroring:
   stage: mirroring
   script:
-    - git push -f https://$GITHUB_USERNAME:$GITHUB_TOKEN@github.com/USI-INF-Software/docker-ci-images.git HEAD:master
+    - git push -f https://$GITHUB_USERNAME:$GITHUB_TOKEN@github.com/si-codelounge/docker-ci-images.git HEAD:master
   only:
     - master
   tags:
