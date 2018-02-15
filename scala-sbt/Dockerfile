@@ -1,6 +1,5 @@
 FROM openjdk:8-jdk-alpine
 
-
 ENV SCALA_VERSION=2.12.4 
 ENV SCALA_HOME=/usr/local/scala 
 ENV SBT_VERSION=1.1.0 
