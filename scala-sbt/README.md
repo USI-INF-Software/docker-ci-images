@@ -2,7 +2,7 @@
 
 ## what's included
 - Bash 
-- Git 2.15
+- Git 2.15.0
 - Java 8 (Open JRE)
 - Scala 2.12.4
 - SBT 1.1.0
