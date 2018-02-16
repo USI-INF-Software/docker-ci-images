@@ -1,8 +1,11 @@
 # Docker Image for Scala+SBT basic Project development based on Alpine Linux
 
-## what's included
-- Bash 
-- Git 2.15.0
+## What's included
+
+- bash
+- git 2.15.0
+- opennssh
+- opennssh-client
 - Java 8 (Open JRE)
 - Scala 2.12.4
 - SBT 1.1.0
