@@ -15,7 +15,6 @@ ENV PATH ${PATH}:${SBT_HOME}/bin
 ENV PATH ${PATH}:${SCALA_HOME}/bin
 ENV PATH ${PATH}:${JAVA_HOME}/bin
 
-
 # Install dependencies
 RUN apk add --no-cache --virtual=.build-dependencies wget unzip && \
     apk add --update bash git openssh-client ca-certificates  && \
