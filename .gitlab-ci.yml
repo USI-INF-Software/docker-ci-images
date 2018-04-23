@@ -3,6 +3,9 @@ image: docker:stable-git
 services:
   - docker:dind
 
+before_script:
+  - apk add --update bash  
+
 variables:
   DOCKER_DRIVER: overlay2
 
