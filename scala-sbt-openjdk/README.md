@@ -5,6 +5,6 @@
 - bash
 - git 2.15.0
 - opennssh-client
-- Java 8 (Oracle JDK v1.8.0_171-b11)
+- Java 8 (OpenJDK)
 - Scala 2.12.4
 - SBT 1.1.0
