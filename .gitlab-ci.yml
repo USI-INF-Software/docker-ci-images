@@ -16,7 +16,6 @@ build_images:
   
   script:
     - docker info
-    - git -version
     - ./ci-jobs/build.sh
   tags:
     - docker-in-docker
