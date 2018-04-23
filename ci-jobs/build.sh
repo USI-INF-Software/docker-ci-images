@@ -16,6 +16,7 @@ do
     DIR=${F%/$DOCKER_FILE}
     NAME=${DIR#*/}
     TAG="${DOCKER_ORG}/${NAME}"
+    echo "Building ${TAG} from ${DIR}"
     docker build -t $TAG $DIR
     # if we could not build then exit with error
     if [ $? -ne 0 ]; then

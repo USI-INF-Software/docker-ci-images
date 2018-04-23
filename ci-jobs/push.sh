@@ -21,6 +21,7 @@ do
     DIR=${F%/$DOCKER_FILE}
     NAME=${DIR#*/}
     TAG="${DOCKER_ORG}/${NAME}"
+    echo "Pushing ${TAG} from ${DIR}"
     docker push $TAG
 
     # if we could not push then exit with error
