@@ -18,14 +18,16 @@ build_images:
   stage: build
   
   script:
-    - docker info
     - ./ci-jobs/build.sh
+  except:
+    - master  
   tags:
     - docker-in-docker
 
 push_images:
   stage: push
   script:
+    - ./ci-jobs/build.sh
     - ./ci-jobs/push.sh
   only:
     - master
@@ -39,4 +41,4 @@ github_mirroring:
   only:
     - master
   tags:
-    - docker-in-docker
+    - docker
