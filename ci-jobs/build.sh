@@ -5,6 +5,9 @@ DOCKER_FILE="Dockerfile"
 # get the list of changed files in last commit
 FILE_DIFF=$(git diff-tree --no-commit-id --name-status -r HEAD~1..HEAD | grep ^[ACMR])
 
+echo "Git Diff:"
+git diff-tree --no-commit-id --name-status -r HEAD~1..HEAD | grep ^[ACMR]
+
 # for each folder that contains a Dockerfile
 # folder name cannot contain space
 for F in $FILE_DIFF
