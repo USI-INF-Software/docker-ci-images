@@ -9,7 +9,7 @@ build_images:
     - docker info
     - ./ci-jobs/build.sh
   tags:
-    - shell
+    - docker-in-docker
 
 push_images:
   stage: push
@@ -18,7 +18,7 @@ push_images:
   only:
     - master
   tags:
-    - shell
+    - docker-in-docker
 
 github_mirroring:
   stage: mirroring
@@ -27,4 +27,4 @@ github_mirroring:
   only:
     - master
   tags:
-    - shell
+    - docker-in-docker
