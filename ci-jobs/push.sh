@@ -18,7 +18,7 @@ fi
 for F in $FILE_DIFF
 do
   echo "Checking ${F}..."
-  if [[ $F =~ *$DOCKER_FILE ]]; then
+  if [[ $F = *$DOCKER_FILE ]]; then
     DIR=${F%/$DOCKER_FILE}
     NAME=${DIR#*/}
     TAG="${DOCKER_ORG}/${NAME}"
