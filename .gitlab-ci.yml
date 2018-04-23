@@ -1,3 +1,11 @@
+image: docker:latest
+
+services:
+  - docker:dind
+
+variables:
+  DOCKER_DRIVER: overlay2
+
 stages:
   - build
   - push
@@ -5,6 +13,7 @@ stages:
 
 build_images:
   stage: build
+  
   script:
     - docker info
     - ./ci-jobs/build.sh
