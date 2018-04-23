@@ -7,6 +7,7 @@ ENV SBT_HOME=/usr/local/sbt
 ENV PATH ${PATH}:${SBT_HOME}/bin
 ENV PATH ${PATH}:${SCALA_HOME}/bin
 
+#Install Scala & SBT
 RUN apk add --no-cache --virtual=.build-dependencies bash wget ca-certificates
 RUN apk add --update bash git openssh-client 
 RUN eval $(ssh-agent -s)
