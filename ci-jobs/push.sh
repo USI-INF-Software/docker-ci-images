@@ -17,6 +17,7 @@ fi
 # folder name cannot contain space
 for F in $FILE_DIFF
 do
+  echo "Checking ${F}..."
   if [[ $F = *$DOCKER_FILE ]]; then
     DIR=${F%/$DOCKER_FILE}
     NAME=${DIR#*/}
