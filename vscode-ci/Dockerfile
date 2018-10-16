@@ -21,4 +21,4 @@ RUN curl https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor > mic
 #####################################################################
 # Running Xvfb in bacground
 #####################################################################
-RUN Xvfb :1 -screen 0 1024x768x16 &
+CMD Xvfb :1 -screen 0 1024x768x16 &
