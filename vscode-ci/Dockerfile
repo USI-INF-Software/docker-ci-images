@@ -3,11 +3,11 @@ FROM node:carbon-jessie
 ENV DISPLAY=:1
 
 #####################################################################
-# Install X11VNC, Xvfb and basic dependencies
+# Install Xvfb and basic dependencies
 #####################################################################
 RUN apt update -y && \
     apt install -y tzdata && \
-    apt install -y apt-transport-https build-essential libasound2 x11vnc xvfb
+    apt install -y apt-transport-https build-essential libasound2 xvfb
 
 #####################################################################
 # Install vscode
@@ -21,4 +21,6 @@ RUN curl https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor > mic
 #####################################################################
 # Running Xvfb in bacground
 #####################################################################
-CMD Xvfb :1 -screen 0 1024x768x16 &
+ADD ./bootstrap.sh /bootstrap.sh
+RUN chmod a+x /bootstrap.sh
+CMD bash -C '/bootstrap.sh'; 'bash'
