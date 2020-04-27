@@ -1,4 +1,4 @@
-FROM node:carbon-jessie
+FROM node:14
 
 #####################################################################
 # Install Xvfb and basic dependencies
