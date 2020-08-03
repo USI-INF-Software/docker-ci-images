@@ -1,27 +1,10 @@
-# Docker Image for testing Visual Studio Code Extension
+# Docker Image to build and test Visual Studio Code OSS
 
 ## What's included
 
 - Node.js 12
 - X11Vnc
 - Xvfb
+- Various other dependencies including libxtst-dev libpng++-dev
 
 Based on [docker-node](https://github.com/nodejs/docker-node) image.
-
-When using this image in a CI (e.g., GitLabCI), define a `postinstall` script in your package.json to install vscode dependencies as follows:
-
-```json
-"scripts": {
-    ...
-    "postinstall": "node ./node_modules/vscode/bin/install"
-    ...
-}
-```
-
-Always run the script after `npm install`.
-
-```bash
-npm install
-npm run postintall
-...
-```
