@@ -15,7 +15,7 @@ do
     NAME=${DIR#*/}
     TAG="${DOCKER_ORG}/${NAME}"
     echo "Building ${TAG} from ${DIR}"
-    docker build -t $TAG --build-arg NRP77_NLP_ANALYSIS_REPO_TOKEN=${NRP77_NLP_ANALYSIS_REPO_TOKEN} $DIR
+    docker build -t $TAG --build-arg NRP77_NLP_ANALYSIS_REPO_TOKEN $DIR
     # if we could not build then exit with error
     if [ $? -ne 0 ]; then
       exit 1
