@@ -4,7 +4,7 @@ COPY environment.yml environment.yml
 
 # setup environment
 RUN conda env create -f environment.yml
-RUN source activate nlp
+RUN conda activate nlp
 
 # download models
 RUN python -m spacy download en_core_web_trf
