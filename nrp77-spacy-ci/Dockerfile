@@ -1,5 +1,7 @@
 FROM continuumio/miniconda3:latest
 
+RUN echo "TOKE=${NRP77_NLP_ANALYSIS_REPO_TOKEN}"
+
 RUN wget --header "PRIVATE-TOKEN: ${NRP77_NLP_ANALYSIS_REPO_TOKEN}" \
     https://gitlab.dev.si.usi.ch/api/v4/projects/297/repository/files/environment.yml/raw \
     --output-document=environment.yml
