@@ -7,6 +7,12 @@ FILE_DIFF=$(git diff-tree --no-commit-id --name-status -r HEAD~1..HEAD | grep "^
 
 NRP77_IMAGE_DIR="nrp77-spacy-ci"
 
+function download_nrp77_environment {
+  wget --header "PRIVATE-TOKEN: ${NRP77_NLP_ANALYSIS_REPO_TOKEN}" \
+    https://gitlab.dev.si.usi.ch/api/v4/projects/297/repository/files/environment.yml/raw \
+    --output-document="${NRP77_IMAGE_DIR}/environment.yml"
+}
+
 # for each folder that contains a Dockerfile
 # folder name cannot contain space
 for F in $FILE_DIFF
@@ -30,10 +36,3 @@ do
 
   fi
 done
-
-
-function download_nrp77_environment {
-  wget --header "PRIVATE-TOKEN: ${NRP77_NLP_ANALYSIS_REPO_TOKEN}" \
-    https://gitlab.dev.si.usi.ch/api/v4/projects/297/repository/files/environment.yml/raw \
-    --output-document="${NRP77_IMAGE_DIR}/environment.yml"
-}
