@@ -13,8 +13,8 @@ RUN conda env create -f environment.yml
 SHELL ["conda", "run", "-n", "nlp", "/bin/bash", "-c"]
 
 # Add spacy models
-RUN python -m spacy download en_core_web_trf
-RUN python -m spacy download fr_dep_news_trf
-RUN python -m spacy download fr_core_news_lg
-RUN python -m spacy download de_dep_news_trf
-RUN python -m spacy download de_core_news_lg
+RUN python -m spacy download en_core_web_trf --timeout=600
+RUN python -m spacy download fr_dep_news_trf --timeout=600
+RUN python -m spacy download fr_core_news_lg --timeout=600
+RUN python -m spacy download de_dep_news_trf --timeout=600
+RUN python -m spacy download de_core_news_lg --timeout=600
