@@ -1,12 +1,17 @@
 FROM continuumio/miniconda3:latest
 
-COPY environment.yml environment.yml
+# based on https://pythonspeed.com/articles/activate-conda-dockerfile/
 
-# setup environment
+WORKDIR /app
+
+# Create the environment:
+COPY environment.yml .
 RUN conda env create -f environment.yml
-RUN conda activate nlp
 
-# download models
+# Make RUN commands use the new environment:
+SHELL ["conda", "run", "-n", "nlp", "/bin/bash", "-c"]
+
+# Add spacy models
 RUN python -m spacy download en_core_web_trf
 RUN python -m spacy download fr_dep_news_trf
 RUN python -m spacy download fr_core_news_lg
