@@ -1,6 +1,7 @@
 FROM continuumio/miniconda3:latest
 
-# based on https://pythonspeed.com/articles/activate-conda-dockerfile/
+# see https://pythonspeed.com/articles/activate-conda-dockerfile/
+# for details about the setup
 
 WORKDIR /app
 
