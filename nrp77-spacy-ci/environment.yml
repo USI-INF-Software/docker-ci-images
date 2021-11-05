@@ -1,0 +1,11 @@
+name: nlp
+channels:
+  - conda-forge
+  - defaults
+dependencies:
+  - python=3.8
+  - spacy=3.1
+  - pytest
+  - assertpy
+  - coverage
+  - pytest-cov
