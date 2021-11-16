@@ -1,4 +1,4 @@
-image: docker:stable-git
+image: ${CI_DEPENDENCY_PROXY_GROUP_IMAGE_PREFIX}/docker:stable-git
 
 services:
   - docker:dind
@@ -8,6 +8,7 @@ before_script:
 
 variables:
   DOCKER_DRIVER: overlay2
+  CI_DEPENDENCY_PROXY_GROUP_IMAGE_PREFIX_FOR_DOCKERFILE: ${CI_DEPENDENCY_PROXY_GROUP_IMAGE_PREFIX}/
 
 stages:
   - build
