@@ -1,4 +1,4 @@
-FROM ${CI_DEPENDENCY_PROXY_GROUP_IMAGE_PREFIX}/continuumio/miniconda3:latest
+FROM ${CI_DEPENDENCY_PROXY_GROUP_IMAGE_PREFIX_FOR_DOCKERFILE}continuumio/miniconda3:latest
 
 # see https://pythonspeed.com/articles/activate-conda-dockerfile/
 # for details about the setup
