@@ -1,4 +1,4 @@
-image: docker:stable-git
+image: ${CI_DEPENDENCY_PROXY_GROUP_IMAGE_PREFIX}/docker:stable-git
 
 services:
   - docker:dind
