@@ -1,4 +1,4 @@
-FROM node:12
+FROM node:16
 
 #####################################################################
 # Install Xvfb and basic dependencies
